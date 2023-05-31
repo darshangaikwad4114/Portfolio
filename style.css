@@ -1,0 +1,33 @@
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* .background {
+  background: linear-gradient(120deg, #ef426a, #76b8eb, #e3a11e);
+  background-size: 400% 400%;
+  animation: anim 5.5s infinite ease-in-out;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+} */
+
+.spb {
+  font-size: medium;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo {
+  border-radius: 3px;
+}
