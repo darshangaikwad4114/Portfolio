@@ -1,9 +1,9 @@
 * {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .background {
-  background: linear-gradient(120deg, #f9839e, #7abef3, #f3c66e, #f9839e );
+  background: linear-gradient(120deg, #f9839e, #7abef3, #f3c66e, #f9839e);
   background-size: 400% 400%;
   animation: anim 5.5s infinite ease-in-out;
 }
@@ -26,4 +26,24 @@
   font-size: medium;
   font-weight: bold;
   color: #000;
+}
+
+.bg-anim {
+  background: linear-gradient(120deg, #95fb9a, #f7849b, #f6948a, #acfb92);
+  background-size: 400% 400%;
+  animation: anim 5.5s infinite ease-in-out;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }
