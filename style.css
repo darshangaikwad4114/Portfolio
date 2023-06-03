@@ -3,7 +3,14 @@
 }
 
 .background {
-  background: linear-gradient(120deg, #f9839e, #7abef3, #f3c66e, #f9839e);
+  background: linear-gradient(
+    120deg,
+    #ffc312,
+    #c4e538,
+    #12cbc4,
+    #fda7df,
+    #ed4c67
+  );
   background-size: 400% 400%;
   animation: anim 5.5s infinite ease-in-out;
 }
@@ -29,7 +36,7 @@
 }
 
 .bg-anim {
-  background: linear-gradient(120deg, #95fb9a, #f7849b, #f6948a, #acfb92);
+  background: linear-gradient(120deg, #c56cf0, #ffb8b8, #ff3838, #ff9f1a,#fffa65);
   background-size: 400% 400%;
   animation: anim 5.5s infinite ease-in-out;
 }
