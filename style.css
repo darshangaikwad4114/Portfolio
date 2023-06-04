@@ -2,7 +2,7 @@
   font-family: "Fira Sans", sans-serif;
 }
 
-.background {
+.bg-anim {
   background: linear-gradient(
     120deg,
     #ffc312,
@@ -32,11 +32,18 @@
 .spb {
   font-size: medium;
   font-weight: bold;
-  color: #000;
+  color: #000000;
 }
 
-.bg-anim {
-  background: linear-gradient(120deg, #c56cf0, #ffb8b8, #ff3838, #ff9f1a,#fffa65);
+.background {
+  background: linear-gradient(
+    120deg,
+    #c56cf0,
+    #ffb8b8,
+    #f87070,
+    #ffb8b8,
+    #c56cf0
+  );
   background-size: 400% 400%;
   animation: anim 5.5s infinite ease-in-out;
 }
