@@ -5,11 +5,11 @@
   "main": "./index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"/script.js"
+    "dev": "purgecss ./css/main.css"
   },
   "author": "Darshan Gaikwad",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.3.0"
   }
 }
