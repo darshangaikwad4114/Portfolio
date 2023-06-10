@@ -2,14 +2,14 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio Project",
-  "main": "script.js",
+  "main": "./index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"/script.js"
   },
   "author": "Darshan Gaikwad",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.5"
+    "bootstrap": "^5.2.3"
   }
 }
