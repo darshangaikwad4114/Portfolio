@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "purgecss": "^5.0.0"
   }
 }
