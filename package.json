@@ -5,7 +5,7 @@
   "main": "./index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "purgecss ./css/main.css"
+    "build": "purgecss --css ./css/main.css --content ./index.html --output ./css/main.css"
   },
   "author": "Darshan Gaikwad",
   "license": "ISC",
@@ -16,3 +16,4 @@
     "purgecss": "^5.0.0"
   }
 }
+
