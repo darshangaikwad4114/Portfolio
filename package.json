@@ -1,12 +1,21 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Darshan Gaikwad Portfolio",
   "main": "index.js",
+  "author": "Darshan Gaikwad",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "purgecss --css /src/css/style.css --content ./index.html --output /src/css/style.css",
+    "dev": "purgecss --css ./src/css/style.css --content ./index.html -output ./src/css/style.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "Portfolio",
+    "Darshan",
+    "Darshan Gaikwad",
+    "purgecss"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "purgecss": "^5.0.0"
+  }
 }
