@@ -7,7 +7,7 @@
   "scripts": {
     "start": "purgecss --css /src/scss/main.css --content ./index.html --output /src/scss/main.css",
     "prettier": "prettier --check '**/**/*.{js,jsx,ts,tsx,css}'",
-    "prettier:fix": "prettier --write '**/**/*.{js,jsx,ts,tsx,css}'"
+    "prettier:fix": "prettier --write '**/**/*.{ js,jsx,ts,tsx,css}'"
   },
   "keywords": [
     "Portfolio",
