@@ -7,7 +7,7 @@
   "scripts": {
     "start": "purgecss --css /src/scss/main.css --content ./index.html --output /src/scss/main.css",
     "prettier": "prettier --check '**/**/*.{js,css}'",
-    "prettier:fix": "prettier --write '**/**/*.{ js,css}'"
+    "prettier:fix": "prettier --write '**/**/*.{js,css}'"
   },
   "keywords": [
     "Portfolio",
@@ -17,7 +17,7 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "purgecss": "^5.0.0"
   }
 }
