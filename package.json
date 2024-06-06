@@ -5,9 +5,8 @@
   "main": "index.js",
   "author": "Darshan Gaikwad",
   "scripts": {
-    "start": "purgecss --css /src/scss/main.css --content ./index.html --output /src/scss/main.css",
-    "prettier": "prettier --check '**/**/*.{js,css}'",
-    "prettier:fix": "prettier --write '**/**/*.{js,css}'"
+    "start": "concurrently \"purgecss --css /src/scss/main.css --content ./index.html --output /src/scss/main.css\" \" --prefix \"[purgecss]\" \" --watch ./src/scss/**/*.scss\" ",
+    "dev": "concurrently \"prettier --check '**/**/*.{js,css}'\" \"prettier --write '**/**/*.{js,css}'\""
   },
   "keywords": [
     "Portfolio",
@@ -17,7 +16,8 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^3.3.0",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.3.1",
     "purgecss": "^5.0.0"
   }
 }
