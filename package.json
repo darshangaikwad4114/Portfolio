@@ -5,17 +5,18 @@
   "main": "index.js",
   "author": "Darshan Gaikwad",
   "scripts": {
-    "start": "concurrently \"purgecss --css /src/scss/main.css --content ./index.html --output /src/scss/main.css\" \" --prefix \"[purgecss]\" \" --watch ./src/scss/**/*.scss\" "
+    "start": "concurrently \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\" \"node-sass --watch ./src/scss --output ./src/css\" \"live-server\"",
+    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
   },
   "keywords": [
     "Portfolio",
     "Darshan",
-    "Darshan Gaikwad",
-    "purgecss"
+    "Darshan Gaikwad"
   ],
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "node-sass": "^9.0.0",
     "purgecss": "^5.0.0"
   }
 }
