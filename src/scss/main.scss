@@ -148,6 +148,7 @@ button {
 button,
 [type="button"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 button:not(:disabled),
