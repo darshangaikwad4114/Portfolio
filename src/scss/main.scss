@@ -320,15 +320,15 @@ hr {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #9f4e2f;
-  border-color: #964a2c;
+  background-color: #8812bf;
+  border-color: #8812bf;
 }
 
 .btn-primary:focus {
   color: #fff;
-  background-color: #9f4e2f;
-  border-color: #964a2c;
-  box-shadow: 0 0 0 0.2rem rgba(199, 117, 86, 0.5);
+  background-color: #8812bf;
+  border-color: #8812bf;
+  box-shadow: 0 0 0 0.2rem #8812bf;
 }
 
 .btn-primary:disabled {
@@ -339,8 +339,8 @@ hr {
 
 .btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
-  background-color: #964a2c;
-  border-color: #8c4529;
+  background-color: #8812bf;
+  border-color: #8812bf;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus {
@@ -646,7 +646,7 @@ a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #964a2c !important;
+  background-color: #8812bf !important;
 }
 
 .rounded-circle {
@@ -759,7 +759,7 @@ button.bg-primary:focus {
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #824027 !important;
+  color: #8812bf !important;
 }
 
 .text-warning {
@@ -856,7 +856,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #8812bf;
 }
 
 @media (min-width: 992px) {

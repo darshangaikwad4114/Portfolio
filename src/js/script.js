@@ -2,7 +2,9 @@
   'use strict'; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+  $('a.js-scroll-trigger[href*="#"]')
+    .not('[href="#"]')
+    .click(function () {
     if (
       location.pathname.replace(/^\//, '') ==
         this.pathname.replace(/^\//, '') &&
@@ -15,8 +17,8 @@
           {
             scrollTop: target.offset().top,
           },
-          1000,
-          'easeInOutExpo',
+          100,
+          'easeInOutExpo'
         );
         return false;
       }
