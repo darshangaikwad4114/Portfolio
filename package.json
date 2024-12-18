@@ -16,7 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "sass": "^1.56.0",
-    "purgecss": "^5.0.0"
+    "purgecss": "^5.0.0",
+    "sass": "^1.83.0"
   }
 }
