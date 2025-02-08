@@ -17,6 +17,6 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "purgecss": "^5.0.0",
-    "sass": "^1.83.4"
+    "sass": "^1.84.0"
   }
 }
