@@ -6,14 +6,21 @@
   "author": "Darshan Gaikwad",
   "scripts": {
     "start": "concurrently \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\" \"sass --watch ./src/scss:./src/css\" \"live-server\"",
-    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
+    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css",
+    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
   },
   "keywords": [
     "Portfolio",
     "Darshan",
-    "Darshan Gaikwad"
+    "Darshan Gaikwad",
+    "Web Developer",
+    "Full Stack Developer"
   ],
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darshangaikwad4114/portfolio"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "purgecss": "^5.0.0",
