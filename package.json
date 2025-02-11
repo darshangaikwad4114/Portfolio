@@ -6,8 +6,8 @@
   "author": "Darshan Gaikwad",
   "scripts": {
     "start": "concurrently \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\" \"sass --watch ./src/scss:./src/css\" \"live-server\"",
-    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css",
-    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
+    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css && npx cssnano-cli ./src/css/main.css ./src/css/main.min.css",
+    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css && cssnano-cli ./src/css/main.css ./src/css/main.min.css"
   },
   "keywords": [
     "Portfolio",
@@ -19,11 +19,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/darshangaikwad4114/portfolio"
+    "url": "https://github.com/darshangai/portfolio.git"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "purgecss": "^5.0.0",
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "purgecss": "^4.1.3",
     "sass": "^1.84.0"
   }
 }
