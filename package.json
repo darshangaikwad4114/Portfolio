@@ -2,16 +2,14 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Darshan Gaikwad Portfolio",
-  "main": "index.js",
   "author": "Darshan Gaikwad",
   "scripts": {
     "start": "concurrently \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\" \"sass --watch ./src/scss:./src/css\" \"live-server\"",
-    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css && npx cssnano-cli ./src/css/main.css ./src/css/main.min.css",
-    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css && cssnano-cli ./src/css/main.css ./src/css/main.min.css"
+    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css",
+    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
   },
   "keywords": [
     "Portfolio",
-    "Darshan",
     "Darshan Gaikwad",
     "Web Developer",
     "Full Stack Developer"
