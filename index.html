@@ -5,10 +5,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Portfolio website of Darshan Gaikwad - Full Stack Web Developer" />
+    <meta name="description" content="Darshan Gaikwad - Full Stack Developer specializing in React.js, Node.js, and modern web technologies. View my portfolio of projects and professional experience.">
     <meta name="author" content="Darshan Gaikwad" />
     <meta name="keywords" content="Darshan Gaikwad, Portfolio, Web Developer, Full Stack Developer, React Developer, JavaScript Developer" />
     <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Darshan Gaikwad - Full Stack Developer Portfolio">
+    <meta property="og:description" content="Portfolio showcasing full stack development projects and professional experience">
+    <meta property="og:image" content="./src/images/profile.png">
     <title>Darshan Gaikwad - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/src/images/Favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -18,6 +21,9 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./src/css/main.css" rel="stylesheet" />
+    <!-- Add preload for critical resources -->
+    <link rel="preload" href="./src/css/main.css" as="style">
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.1/js/all.js" as="script">
 </head>
 
 <body id="page-top">
@@ -187,55 +193,166 @@
         <section class="resume-section" id="projects">
             <div class="resume-section-content projects">
                 <h2 class="mb-5">Projects📂</h2>
-                <div class="d-flex row">
-                    <div class="card col-md-3 col-12 mx-2 mb-1" style="width: 25rem">
-                        <img class="card-img-top" src="./src/images/project2.png" alt="SiriStay Resort App Screenshot" loading="lazy" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center">SiriStay Resort App</h5>
-                            <a href="https://github.com/darshangaikwad4114/Resort-management-system" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-primary">Github</a>
-                            <a href="https://darshan-resort-management-system.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-secondary">Demo</a>
+                <div class="d-flex row justify-content-center g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="./src/images/project2.png" 
+                                     alt="SiriStay Resort App Screenshot" 
+                                     loading="lazy" />
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">SiriStay Resort App</h5>
+                                <div class="tech-stack mb-2">
+                                    <span class="tech-pill react">React</span>
+                                    <span class="tech-pill node">Node.js</span>
+                                    <span class="tech-pill mongo">MongoDB</span>
+                                </div>
+                                <p class="card-text">A comprehensive resort management system built with modern web technologies.</p>
+                                <div class="card-links mt-auto">
+                                    <a href="https://github.com/darshangaikwad4114/Resort-management-system" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-primary">
+                                        <i class="fab fa-github"></i>Source
+                                    </a>
+                                    <a href="https://darshan-resort-management-system.netlify.app/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fas fa-external-link-alt"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card col-md-3 col-12 mx-2 mb-1" style="width: 25rem">
-                        <img class="card-img-top" src="./src/images/project3.png" alt="India GDP Visual Chart Screenshot" loading="lazy" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center">India GDP Visual Chart</h5>
-                            <a href="https://github.com/darshangaikwad4114/India_GDP_Visualisation_Chart"
-                                target="_blank" rel="noopener noreferrer" class="btn btn-primary">Github</a>
-                            <a href="https://india-gdp-visualisation-chart.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-secondary">Demo</a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="./src/images/project3.png" 
+                                     alt="India GDP Visual Chart Screenshot" 
+                                     loading="lazy" />
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">India GDP Visual Chart</h5>
+                                <div class="tech-stack mb-2">
+                                    <span class="tech-pill javascript">JavaScript</span>
+                                    <span class="tech-pill html">HTML</span>
+                                    <span class="tech-pill css">CSS</span>
+                                </div>
+                                <p class="card-text">A visual representation of India's GDP growth over time.</p>
+                                <div class="card-links mt-auto">
+                                    <a href="https://github.com/darshangaikwad4114/India_GDP_Visualisation_Chart" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-primary">
+                                        <i class="fab fa-github"></i>Source
+                                    </a>
+                                    <a href="https://india-gdp-visualisation-chart.netlify.app/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fas fa-external-link-alt"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card col-md-3 col-12 mx-2 mb-1" style="width: 25rem">
-                        <img class="card-img-top" src="./src/images/project4.png" alt="QuickCart E-Commerce App Screenshot" loading="lazy" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center">QuickCart E-Commerce App</h5>
-                            <a href="https://github.com/darshangaikwad4114/Ecommerce" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-primary">Github</a>
-                            <a href="https://darshan-ecommerce.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-secondary">Demo</a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="./src/images/project4.png" 
+                                     alt="QuickCart E-Commerce App Screenshot" 
+                                     loading="lazy" />
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">QuickCart E-Commerce App</h5>
+                                <div class="tech-stack mb-2">
+                                    <span class="tech-pill react">React</span>
+                                    <span class="tech-pill redux">Redux</span>
+                                    <span class="tech-pill firebase">Firebase</span>
+                                    <span class="tech-pill sass">Sass</span>
+                                </div>
+                                <p class="card-text">A full-featured e-commerce application for managing products and orders.</p>
+                                <div class="card-links mt-auto">
+                                    <a href="https://github.com/darshangaikwad4114/Ecommerce" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-primary">
+                                        <i class="fab fa-github"></i>Source
+                                    </a>
+                                    <a href="https://darshan-ecommerce.netlify.app/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fas fa-external-link-alt"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card col-md-3 col-12 mx-2 mb-1" style="width: 25rem">
-                        <img class="card-img-top" src="./src/images/project1.png" alt="Cryptocurrency Price Tracker Screenshot" loading="lazy" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Cryptocurrency Price Tracker</h5>
-                            <a href="https://github.com/darshangaikwad4114/Cryptocurrency-Price-Tracker" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-primary">Github</a>
-                            <a href="https://darshan-cryptocurrency-price-tracker.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-secondary">Demo</a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="./src/images/project1.png" 
+                                     alt="Cryptocurrency Price Tracker Screenshot" 
+                                     loading="lazy" />
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Cryptocurrency Price Tracker</h5>
+                                <div class="tech-stack mb-2">
+                                    <span class="tech-pill react">React</span>
+                                    <span class="tech-pill node">Node.js</span>
+                                    <span class="tech-pill mongo">MongoDB</span>
+                                </div>
+                                <p class="card-text">Real-time tracking of cryptocurrency prices and market trends.</p>
+                                <div class="card-links mt-auto">
+                                    <a href="https://github.com/darshangaikwad4114/Cryptocurrency-Price-Tracker" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-primary">
+                                        <i class="fab fa-github"></i>Source
+                                    </a>
+                                    <a href="https://darshan-cryptocurrency-price-tracker.netlify.app/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fas fa-external-link-alt"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card col-md-3 col-12 mx-2 mb-1" style="width: 25rem">
-                        <img class="card-img-top" src="./src/images/project5.png" alt="FilmFinder Movie App Screenshot" loading="lazy" />
-                        <div class="card-body">
-                            <h5 class="card-title text-center">FilmFinder Movie App</h5>
-                            <a href="https://github.com/darshangaikwad4114/Movie-app" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-primary">Github</a>
-                            <a href="https://darshan-movie-app.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-secondary">Demo</a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img class="card-img-top" src="./src/images/project5.png" 
+                                     alt="FilmFinder Movie App Screenshot" 
+                                     loading="lazy" />
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">FilmFinder Movie App</h5>
+                                <div class="tech-stack mb-2">
+                                    <span class="tech-pill react">React</span>
+                                    <span class="tech-pill typescript">TypeScript</span>
+                                    <span class="tech-pill bootstrap">Bootstrap</span>
+                                </div>
+                                <p class="card-text">A movie recommendation and discovery platform.</p>
+                                <div class="card-links mt-auto">
+                                    <a href="https://github.com/darshangaikwad4114/Movie-app" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-primary">
+                                        <i class="fab fa-github"></i>Source
+                                    </a>
+                                    <a href="https://darshan-movie-app.netlify.app/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="btn btn-secondary">
+                                        <i class="fas fa-external-link-alt"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

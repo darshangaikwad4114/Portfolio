@@ -551,6 +551,13 @@ hr {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
 }
 
 .card > hr {
@@ -561,17 +568,33 @@ hr {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
-  min-height: 50px;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%; // 16:9 aspect ratio
 }
 
 .card-img-top {
-  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .card-img-top {
@@ -582,6 +605,30 @@ hr {
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-text {
+  color: #6c757d;
+  margin-bottom: 1.25rem;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn i {
+  font-size: 1rem;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -958,6 +1005,9 @@ section.resume-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
   max-width: 75rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 section.resume-section .resume-section-content {
@@ -976,5 +1026,266 @@ section.resume-section .resume-section-content {
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .social-icons .social-icon {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  .subheading {
+    font-size: 1.25rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.social-icon {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+#sideNav {
+  .navbar-nav .nav-item .nav-link {
+    transition: color 0.3s ease;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Project section specific styles
+.projects {
+  .card {
+    border: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    max-width: 380px; // Slightly wider for 3-column layout
+    margin: 0 auto;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      padding-top: 65%; // Slightly taller aspect ratio
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+
+      .card-img-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1.25rem; // Slightly reduced padding
+      
+      .card-title {
+        font-size: 1.1rem; // Slightly smaller font
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        min-height: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-text {
+        font-size: 0.9rem; // Smaller text
+        color: #6c757d;
+        margin-bottom: 1rem;
+        min-height: 42px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-links {
+        display: flex;
+        gap: 0.75rem;
+        
+        .btn {
+          flex: 1;
+          padding: 0.5rem;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          
+          i {
+            margin-right: 0.4rem;
+          }
+        }
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        .tech-pill {
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: white;
+          
+          &.react {
+            background: #61dafb;
+            color: #000;
+          }
+          
+          &.node {
+            background: #68a063;
+          }
+          
+          &.mongo {
+            background: #4db33d;
+          }
+          
+          &.express {
+            background: #000;
+          }
+          
+          &.javascript {
+            background: #f7df1e;
+            color: #000;
+          }
+          
+          &.html {
+            background: #e34f26;
+          }
+          
+          &.css {
+            background: #264de4;
+          }
+          
+          &.sass {
+            background: #cc6699;
+          }
+          
+          &.bootstrap {
+            background: #7952b3;
+          }
+          
+          &.firebase {
+            background: #ffca28;
+            color: #000;
+          }
+          
+          &.typescript {
+            background: #3178c6;
+          }
+          
+          &.redux {
+            background: #764abc;
+          }
+        }
+      }
+    }
+  }
+
+  // Adjust grid layout
+  .row {
+    justify-content: flex-start; // Change to flex-start to align properly
+    gap: 2rem;
+    margin: 0 -1rem; // Negative margin to align with container
+    
+    [class*="col-"] {
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 992px) {
+      > div {
+        flex: 0 0 calc(33.333% - 1.33rem);
+        max-width: calc(33.333% - 1.33rem);
+      }
+    }
+  }
+}
+
+// Update responsive breakpoints
+@media (max-width: 992px) {
+  .projects .row {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    .card {
+      max-width: none;
+    }
+    .row {
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .projects .row > div {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .projects .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .projects .card .tech-stack {
+    justify-content: center;
   }
 }

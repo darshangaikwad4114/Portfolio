@@ -1,7 +1,18 @@
 (function ($) {
   "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing with improved performance
+  // Debounce function to limit scroll event firing
+  function debounce(func, wait) {
+    let timeout;
+    return function() {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
+  // Smooth scrolling with improved performance
   $('a.js-scroll-trigger[href*="#"]')
     .not('[href="#"]')
     .on('click', function (e) {
@@ -19,11 +30,12 @@
         if (target.length) {
           $("html, body").animate(
             {
-              scrollTop: target.offset().top,
+              scrollTop: target.offset().top - 48, // Offset for fixed header
             },
-            100, // Keep animation quick for better UX
+            600, // Smoother animation duration
             "easeInOutExpo"
           );
+          return false;
         }
       }
     });
@@ -33,18 +45,17 @@
     $(".navbar-collapse").collapse("hide");
   });
 
-  // Activate scrollspy with throttling to improve scroll performance
-  let scrollTimeout;
-  $(window).on('scroll', function() {
-    if (!scrollTimeout) {
-      scrollTimeout = setTimeout(function() {
-        $("body").scrollspy({
-          target: "#sideNav",
-          offset: 50 // Add offset for better accuracy
-        });
-        scrollTimeout = null;
-      }, 100);
-    }
-  });
+  // Activate scrollspy with debouncing
+  const debouncedScrollspy = debounce(function() {
+    $("body").scrollspy({
+      target: "#sideNav",
+      offset: 74 // Adjusted offset for better accuracy
+    });
+  }, 100);
+
+  $(window).on('scroll', debouncedScrollspy);
+  
+  // Initialize scrollspy on load
+  debouncedScrollspy();
 
 })(jQuery); // End of use strict
