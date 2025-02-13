@@ -573,20 +573,18 @@ hr {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
-.card-img-top:hover {
+
+.card:hover .card-img-top {
   transform: scale(1.05);
 }
 
 .card-img-top {
   min-height: 150px;
   max-height: 150px;
-}
-
-.card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
 }
 
 .card-text {
@@ -1148,17 +1146,25 @@ section.resume-section .resume-section-content {
   background: #764abc;
 }
 .projects .row {
-  justify-content: flex-start;
+  display: flex;
+  justify-content: space-between;
   gap: 2rem;
-  margin: 0 -1rem;
+  margin: 0;
 }
 .projects .row [class*=col-] {
-  padding: 0 1rem;
+  padding: 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .projects .row > div {
-    flex: 0 0 calc(33.333% - 1.33rem);
-    max-width: calc(33.333% - 1.33rem);
+    flex: 0 0 calc(30% - 1rem);
+    max-width: calc(30% - 1rem);
+    width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .projects .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
