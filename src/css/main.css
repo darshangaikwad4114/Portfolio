@@ -1105,19 +1105,10 @@ section.resume-section .resume-section-content {
   font-size: 0.75rem;
   font-weight: 500;
   color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
-.projects .card .card-body .tech-stack .tech-pill.react {
-  background: #61dafb;
-  color: #000;
-}
-.projects .card .card-body .tech-stack .tech-pill.node {
-  background: #68a063;
-}
-.projects .card .card-body .tech-stack .tech-pill.mongo {
-  background: #4db33d;
-}
-.projects .card .card-body .tech-stack .tech-pill.express {
-  background: #000;
+.projects .card .card-body .tech-stack .tech-pill.java {
+  background: #007396;
 }
 .projects .card .card-body .tech-stack .tech-pill.javascript {
   background: #f7df1e;
@@ -1129,21 +1120,63 @@ section.resume-section .resume-section-content {
 .projects .card .card-body .tech-stack .tech-pill.css {
   background: #264de4;
 }
-.projects .card .card-body .tech-stack .tech-pill.sass {
-  background: #cc6699;
+.projects .card .card-body .tech-stack .tech-pill.scss {
+  background: #c6538c;
+}
+.projects .card .card-body .tech-stack .tech-pill.sql {
+  background: #f29111;
+}
+.projects .card .card-body .tech-stack .tech-pill.react {
+  background: #61dafb;
+  color: #000;
+}
+.projects .card .card-body .tech-stack .tech-pill.node {
+  background: #68a063;
+}
+.projects .card .card-body .tech-stack .tech-pill.express {
+  background: #000;
+}
+.projects .card .card-body .tech-stack .tech-pill.tailwind {
+  background: #38b2ac;
 }
 .projects .card .card-body .tech-stack .tech-pill.bootstrap {
   background: #7952b3;
+}
+.projects .card .card-body .tech-stack .tech-pill.mongo {
+  background: #4db33d;
+}
+.projects .card .card-body .tech-stack .tech-pill.mysql {
+  background: #00758f;
 }
 .projects .card .card-body .tech-stack .tech-pill.firebase {
   background: #ffca28;
   color: #000;
 }
-.projects .card .card-body .tech-stack .tech-pill.typescript {
-  background: #3178c6;
+.projects .card .card-body .tech-stack .tech-pill.vercel {
+  background: #000;
 }
-.projects .card .card-body .tech-stack .tech-pill.redux {
-  background: #764abc;
+.projects .card .card-body .tech-stack .tech-pill.webpack {
+  background: #8ccaf0;
+}
+.projects .card .card-body .tech-stack .tech-pill.vite {
+  background: #646cff;
+}
+.projects .card .card-body .tech-stack .tech-pill.github {
+  background: #24292e;
+}
+.projects .card .card-body .tech-stack .tech-pill.git {
+  background: #f05032;
+}
+.projects .card .card-body .tech-stack .tech-pill.vscode {
+  background: #007acc;
+}
+.projects .card .card-body .tech-stack .tech-pill.postman {
+  background: #ff6c37;
+}
+.projects .card .card-body .tech-stack .tech-pill:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .projects .row {
   display: flex;
@@ -1195,6 +1228,133 @@ section.resume-section .resume-section-content {
   .projects .card .tech-stack {
     justify-content: center;
   }
+}
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+.tech-stack .tech-pill {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.tech-stack .tech-pill.java {
+  background: #007396;
+}
+.tech-stack .tech-pill.javascript {
+  background: #f7df1e;
+  color: #000;
+}
+.tech-stack .tech-pill.html {
+  background: #e34f26;
+}
+.tech-stack .tech-pill.css {
+  background: #264de4;
+}
+.tech-stack .tech-pill.scss {
+  background: #c6538c;
+}
+.tech-stack .tech-pill.sql {
+  background: #f29111;
+}
+.tech-stack .tech-pill.react {
+  background: #61dafb;
+  color: #000;
+}
+.tech-stack .tech-pill.node {
+  background: #68a063;
+}
+.tech-stack .tech-pill.express {
+  background: #000;
+}
+.tech-stack .tech-pill.tailwind {
+  background: #38b2ac;
+}
+.tech-stack .tech-pill.bootstrap {
+  background: #7952b3;
+}
+.tech-stack .tech-pill.mongo {
+  background: #4db33d;
+}
+.tech-stack .tech-pill.mysql {
+  background: #00758f;
+}
+.tech-stack .tech-pill.firebase {
+  background: #ffca28;
+  color: #000;
+}
+.tech-stack .tech-pill.vercel {
+  background: #000;
+}
+.tech-stack .tech-pill.webpack {
+  background: #8ccaf0;
+}
+.tech-stack .tech-pill.vite {
+  background: #646cff;
+}
+.tech-stack .tech-pill.github {
+  background: #24292e;
+}
+.tech-stack .tech-pill.git {
+  background: #f05032;
+}
+.tech-stack .tech-pill.vscode {
+  background: #007acc;
+}
+.tech-stack .tech-pill.postman {
+  background: #ff6c37;
+}
+.tech-stack .tech-pill:hover {
+  background-color: rgb(0, 75.9, 99);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.certification-item {
+  position: relative;
+  padding: 10px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+.certification-item:hover {
+  transform: translateY(-3px);
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+.certification-item span.fa-li {
+  color: #ffc107;
+  transition: color 0.3s ease;
+}
+.certification-item:hover span.fa-li {
+  color: #ffca28;
+}
+
+.resume-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.resume-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=main.css.map */
