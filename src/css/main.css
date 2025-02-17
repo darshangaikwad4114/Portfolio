@@ -1595,6 +1595,7 @@ section.resume-section .resume-section-content {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  transform: scale(1);
 }
 .hero-buttons .social-icon::before {
   content: "";
@@ -1609,7 +1610,7 @@ section.resume-section .resume-section-content {
   z-index: 1;
 }
 .hero-buttons .social-icon:hover {
-  transform: translateY(-5px);
+  transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .hero-buttons .social-icon:hover::before {

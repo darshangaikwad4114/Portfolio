@@ -1848,7 +1848,8 @@ $postman-hover: darken($postman-color, 10%);
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
-
+    transform: scale(1);
+    
     &::before {
       content: "";
       position: absolute;
@@ -1863,7 +1864,7 @@ $postman-hover: darken($postman-color, 10%);
     }
 
     &:hover {
-      transform: translateY(-5px);
+      transform: scale(1.1);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
       &::before {
