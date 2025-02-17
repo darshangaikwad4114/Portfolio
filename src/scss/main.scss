@@ -1,3 +1,4 @@
+// Variables
 :root {
   --blue: #1e90ff;
   --indigo: #4b0082;
@@ -37,6 +38,7 @@
   --font-weight-bold: 700;
 }
 
+// Global styles
 *,
 *::before,
 *::after {
@@ -73,6 +75,7 @@ hr {
   overflow: visible;
 }
 
+// Typography
 h1,
 h2,
 h3,
@@ -167,6 +170,7 @@ button::-moz-focus-inner,
   -webkit-appearance: button;
 }
 
+// Headings
 h1,
 h2,
 h3,
@@ -692,6 +696,7 @@ button.bg-primary:focus {
   background-color: #8812bf !important;
 }
 
+// Utility classes
 .rounded-circle {
   border-radius: 50% !important;
 }
@@ -1084,6 +1089,7 @@ section.resume-section .resume-section-content {
   }
 }
 
+// Animations
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -1347,163 +1353,6 @@ section.resume-section .resume-section-content {
   }
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s forwards;
-
-  .tech-pill {
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: white;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease,
-      transform 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-    &.java {
-      background: #007396;
-    }
-
-    &.javascript {
-      background: #f7df1e;
-      color: #000;
-    }
-
-    &.html {
-      background: #e34f26;
-    }
-
-    &.css {
-      background: #264de4;
-    }
-
-    &.scss {
-      background: #c6538c;
-    }
-
-    &.sql {
-      background: #f29111;
-    }
-
-    &.react {
-      background: #61dafb;
-      color: #000;
-    }
-
-    &.node {
-      background: #68a063;
-    }
-
-    &.express {
-      background: #000;
-    }
-
-    &.tailwind {
-      background: #38b2ac;
-    }
-
-    &.bootstrap {
-      background: #7952b3;
-    }
-
-    &.mongo {
-      background: #4db33d;
-    }
-
-    &.mysql {
-      background: #00758f;
-    }
-
-    &.firebase {
-      background: #ffca28;
-      color: #000;
-    }
-
-    &.vercel {
-      background: #000;
-    }
-
-    &.webpack {
-      background: #8ccaf0;
-    }
-
-    &.vite {
-      background: #646cff;
-    }
-
-    &.github {
-      background: #24292e;
-    }
-
-    &.git {
-      background: #f05032;
-    }
-
-    &.vscode {
-      background: #007acc;
-    }
-
-    &.postman {
-      background: #ff6c37;
-    }
-
-    &:hover {
-      background-color: darken(#007396, 10%);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-      transform: scale(1.05);
-    }
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.certification-item {
-  position: relative;
-  padding: 10px 0;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border-bottom: 1px solid #e0e0e0;
-
-  &:hover {
-    transform: translateY(-3px);
-    background-color: #f8f9fa;
-    color: #007bff;
-  }
-
-  span.fa-li {
-    color: #ffc107;
-    transition: color 0.3s ease;
-  }
-
-  &:hover span.fa-li {
-    color: #ffca28;
-  }
-}
-
-.resume-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 // Java
 $java-color: #5382a1;
 $java-hover: darken($java-color, 10%);
@@ -1763,6 +1612,7 @@ $postman-hover: darken($postman-color, 10%);
   }
 }
 
+// Animations
 @keyframes fadeInUp {
   from {
     opacity: 0;
