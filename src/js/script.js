@@ -58,4 +58,17 @@
   // Initialize scrollspy on load
   debouncedScrollspy();
 
+  // Add 'active' class to nav links when scrolling
+  $(window).on('scroll', function() {
+    const scrollDistance = $(window).scrollTop();
+
+    // For each section, check if it's in view and add 'active' class to the corresponding nav link
+    $('section').each(function(i) {
+      if ($(this).position().top <= scrollDistance + 100) {
+        $('.navbar-nav .nav-item .nav-link').removeClass('active');
+        $('.navbar-nav .nav-item .nav-link').eq(i).addClass('active');
+      }
+    });
+  }).scroll();
+
 })(jQuery); // End of use strict
