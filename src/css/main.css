@@ -1357,4 +1357,194 @@ section.resume-section .resume-section-content {
   transform: translateY(0);
 }
 
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+.tech-stack .tech-pill {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.tech-stack .tech-pill.java {
+  background: #5382a1;
+}
+.tech-stack .tech-pill.java:hover {
+  background: rgb(65.6516393443, 102.8278688525, 127.3483606557);
+}
+.tech-stack .tech-pill.javascript {
+  background: #f7df1e;
+  color: #000;
+}
+.tech-stack .tech-pill.javascript:hover {
+  background: rgb(218.2403433476, 194.9613733906, 7.7596566524);
+}
+.tech-stack .tech-pill.html {
+  background: #e34f26;
+}
+.tech-stack .tech-pill.html:hover {
+  background: rgb(189.5428571429, 60.2693877551, 24.4571428571);
+}
+.tech-stack .tech-pill.css {
+  background: #1572b6;
+}
+.tech-stack .tech-pill.css:hover {
+  background: rgb(15.724137931, 85.3596059113, 136.275862069);
+}
+.tech-stack .tech-pill.scss {
+  background: #c6538c;
+}
+.tech-stack .tech-pill.scss:hover {
+  background: rgb(172.7510917031, 57.2489082969, 114.4978165939);
+}
+.tech-stack .tech-pill.sql {
+  background: #e38c00;
+}
+.tech-stack .tech-pill.sql:hover {
+  background: rgb(176, 108.5462555066, 0);
+}
+.tech-stack .tech-pill.react {
+  background: #61dafb;
+  color: #000;
+}
+.tech-stack .tech-pill.react:hover {
+  background: rgb(47.2592592593, 206.3518518519, 249.7407407407);
+}
+.tech-stack .tech-pill.node {
+  background: #339933;
+}
+.tech-stack .tech-pill.node:hover {
+  background: rgb(38.25, 114.75, 38.25);
+}
+.tech-stack .tech-pill.express {
+  background: #000000;
+}
+.tech-stack .tech-pill.express:hover {
+  background: rgb(25.5, 25.5, 25.5);
+}
+.tech-stack .tech-pill.tailwind {
+  background: #38b2ac;
+}
+.tech-stack .tech-pill.tailwind:hover {
+  background: rgb(43.7948717949, 139.2051282051, 134.5128205128);
+}
+.tech-stack .tech-pill.bootstrap {
+  background: #7952b3;
+}
+.tech-stack .tech-pill.bootstrap:hover {
+  background: rgb(96.9879518072, 64.0963855422, 145.9036144578);
+}
+.tech-stack .tech-pill.mongo {
+  background: #47a248;
+}
+.tech-stack .tech-pill.mongo:hover {
+  background: rgb(55.4592274678, 126.5407725322, 56.2403433476);
+}
+.tech-stack .tech-pill.mysql {
+  background: #00758f;
+}
+.tech-stack .tech-pill.mysql:hover {
+  background: rgb(0, 75.2727272727, 92);
+}
+.tech-stack .tech-pill.firebase {
+  background: #ffca28;
+  color: #000;
+}
+.tech-stack .tech-pill.firebase:hover {
+  background: rgb(244, 183.8511627907, 0);
+}
+.tech-stack .tech-pill.vercel {
+  background: #000000;
+}
+.tech-stack .tech-pill.vercel:hover {
+  background: rgb(25.5, 25.5, 25.5);
+}
+.tech-stack .tech-pill.webpack {
+  background: #8dd6f9;
+}
+.tech-stack .tech-pill.webpack:hover {
+  background: rgb(92.55, 196.575, 246.45);
+}
+.tech-stack .tech-pill.vite {
+  background: #646cff;
+}
+.tech-stack .tech-pill.vite:hover {
+  background: rgb(49, 59.6322580645, 255);
+}
+.tech-stack .tech-pill.github {
+  background: #181717;
+}
+.tech-stack .tech-pill.github:hover {
+  background: rgb(50.0425531915, 47.9574468085, 47.9574468085);
+}
+.tech-stack .tech-pill.git {
+  background: #f05032;
+}
+.tech-stack .tech-pill.git:hover {
+  background: rgb(222.7045454545, 48.8863636364, 16.2954545455);
+}
+.tech-stack .tech-pill.vscode {
+  background: #007acc;
+}
+.tech-stack .tech-pill.vscode:hover {
+  background: rgb(0, 91.5, 153);
+}
+.tech-stack .tech-pill.postman {
+  background: #ff6c37;
+}
+.tech-stack .tech-pill.postman:hover {
+  background: rgb(255, 70.515, 4);
+}
+.tech-stack .tech-pill:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.certification-item {
+  position: relative;
+  padding: 10px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+.certification-item:hover {
+  transform: translateY(-3px);
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+.certification-item span.fa-li {
+  color: #ffc107;
+  transition: color 0.3s ease;
+}
+.certification-item:hover span.fa-li {
+  color: #ffca28;
+}
+
+.resume-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.resume-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=main.css.map */
