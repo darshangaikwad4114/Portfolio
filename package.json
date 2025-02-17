@@ -5,8 +5,7 @@
   "author": "Darshan Gaikwad",
   "scripts": {
     "start": "concurrently \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\" \"sass --watch ./src/scss:./src/css\" \"live-server\"",
-    "dev": "purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css",
-    "build": "sass ./src/scss:./src/css && purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css"
+    "dev": "concurrently \"sass ./src/scss:./src/css\" \"purgecss --css ./src/scss/main.css --content ./index.html --output ./src/css/main.css\""
   },
   "keywords": [
     "Portfolio",
