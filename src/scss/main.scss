@@ -1049,6 +1049,49 @@ section.resume-section .resume-section-content {
   h1 {
     font-size: 3rem;
   }
+
+  .education-item {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    transform: translateX(0);
+
+    .education-date {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .projects .card {
+    max-width: none;
+  }
+
+  .projects .row {
+    gap: 1rem;
+  }
+
+  .projects .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .projects .card .tech-stack {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .projects .row {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects .row > div {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
 }
 
 .social-icon {
