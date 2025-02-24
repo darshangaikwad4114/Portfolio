@@ -445,39 +445,39 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   #sideNav .navbar-brand {
-    position: relative;
-    display: flex;
-    justify-content: center;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem 0;
   }
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  #sideNav .navbar-brand .img-profile:hover {
+    transform: scale(1.05);
   }
   #sideNav .navbar-collapse {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     margin: 2rem 0;
   }
   #sideNav .navbar-collapse .navbar-nav {
     width: 100%;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
     text-align: center;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    padding: 1rem;
-    font-size: 1.1rem;
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    margin: 0.75rem 0;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link::after {
-    left: 50%;
-    transform: translateX(-50%);
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
   .container-fluid {
     padding-left: 17rem;
