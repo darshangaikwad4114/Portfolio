@@ -1,4 +1,5 @@
 @import 'animations';
+@import 'buttons';
 
 // Variables
 :root {
@@ -659,6 +660,16 @@ hr {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+
+  .btn {
+    &-primary {
+      @extend .btn-3d;
+    }
+    
+    &-secondary {
+      @extend .btn-glow;
+    }
+  }
 }
 
 .btn {
@@ -1038,6 +1049,8 @@ p.lead {
   font-size: 1.5rem;
   margin-right: 1.5rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @extend .btn-magnetic;
 
   &:hover {
     transform: translateY(-4px) rotate(8deg);
@@ -1847,7 +1860,8 @@ $postman-hover: darken($postman-color, 10%);
   gap: 1.5rem;
   margin-top: 2rem;
 
-  .social-icon {
+  .btn {
+    @extend .btn-gradient;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;

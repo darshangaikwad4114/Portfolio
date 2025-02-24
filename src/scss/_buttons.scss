@@ -1,0 +1,297 @@
+// Base button styles with modern design
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0.8em 1.6em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // Gradient border button
+  &-gradient {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
+    border: 2px solid transparent;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
+      color: white;
+    }
+  }
+  
+  // 3D Transform button
+  &-3d {
+    background: var(--primary);
+    color: white;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: darken(#9338bd, 10%);
+      transform: translateZ(-8px);
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    
+    &:hover {
+      transform: perspective(1000px) translateZ(10px);
+    }
+    
+    &:active {
+      transform: perspective(1000px) translateZ(2px);
+    }
+  }
+  
+  // Ripple effect button
+  &-ripple {
+    background: var(--secondary);
+    color: white;
+    
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+    }
+  }
+  
+  // Glowing border button
+  &-glow {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      padding: 2px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+    
+    &:hover {
+      box-shadow: 0 0 15px var(--primary);
+      color: white;
+      background: var(--primary);
+    }
+  }
+  
+  // Magnetic button
+  &-magnetic {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+      transform: translate(var(--mx, 0), var(--my, 0));
+    }
+  }
+}
+
+// Project card buttons
+.card-links {
+  .btn {
+    background-color: #3654ff;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #3654ff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    
+    i {
+      width: 1.6em;
+      margin: 0 0.8em;
+      transition: all 0.6s ease;
+    }
+    
+    span {
+      margin: 0 1.5em;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: #3654ff;
+      
+      i {
+        transform: translateX(5px);
+      }
+    }
+    
+    // Demo button variant
+    &.btn-secondary {
+      background-color: #FF3366;
+      border-color: #FF3366;
+      
+      &:hover {
+        background-color: transparent;
+        color: #FF3366;
+      }
+    }
+  }
+}
+
+// Social icons with morphing wave effect
+.social-icons {
+  .social-icon {
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    isolation: isolate;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, 
+        rgba(255,255,255,0.8) 0%,
+        rgba(255,255,255,0) 70%);
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.5s;
+      z-index: -1;
+    }
+
+    &:nth-child(1) {
+      background: #0077B5;
+      &:hover {
+        background: #0077B5;
+        filter: brightness(1.2);
+        transform: perspective(500px) rotateY(15deg);
+      }
+    }
+
+    &:nth-child(2) {
+      background: #333;
+      &:hover {
+        background: #333;
+        filter: brightness(1.2);
+        transform: perspective(500px) rotateY(-15deg);
+      }
+    }
+
+    &:nth-child(3) {
+      background: #E4405F;
+      &:hover {
+        background: #E4405F;
+        filter: brightness(1.2);
+        transform: perspective(500px) rotateY(15deg);
+      }
+    }
+
+    &:nth-child(4) {
+      background: #FF3366;
+      &:hover {
+        background: #FF3366;
+        filter: brightness(1.2);
+        transform: perspective(500px) rotateY(-15deg);
+      }
+    }
+
+    i {
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+      &::before {
+        opacity: 1;
+        animation: wave 2s linear infinite;
+      }
+
+      &::after {
+        opacity: 1;
+        animation: wave 2s linear infinite reverse;
+      }
+
+      i {
+        animation: float 1s ease infinite alternate;
+        filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+      }
+    }
+  }
+}
+
+// Animation keyframes
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(-3px); }
+  to { transform: translateY(3px); }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50%) translateY(50%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-3px) scale(1.1);
+  }
+}
