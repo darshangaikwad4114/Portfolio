@@ -1,4 +1,72 @@
 @charset "UTF-8";
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 56, 189, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(147, 56, 189, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 56, 189, 0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
 :root {
   --blue: #1e90ff;
   --indigo: #4b0082;
@@ -394,6 +462,8 @@ hr {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover,
@@ -543,6 +613,17 @@ hr {
   border-radius: 0.25rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+.card .card-img-top {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover {
   transform: translateY(-5px);
@@ -558,6 +639,21 @@ hr {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.5rem;
+}
+.card-body .tech-stack .tech-pill {
+  opacity: 0.9;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+.card-body .tech-stack .tech-pill:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.card-body .card-links .btn i {
+  transition: transform 0.3s ease;
+}
+.card-body .card-links .btn:hover i {
+  transform: rotate(360deg);
 }
 
 .card-title {
@@ -611,6 +707,32 @@ hr {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::before {
+  width: 300%;
+  height: 300%;
+}
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn i {
@@ -918,6 +1040,13 @@ p.lead {
   border-radius: 100%;
   font-size: 1.5rem;
   margin-right: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icons .social-icon:hover {
+  transform: translateY(-4px) rotate(8deg);
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  animation: shimmer 3s infinite linear;
+  background-size: 200% 100%;
 }
 
 .social-icons .social-icon:last-child {
@@ -963,10 +1092,47 @@ section.resume-section {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-out forwards;
 }
-
 section.resume-section .resume-section-content {
   width: 100%;
+}
+section.resume-section .resume-section-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+section.resume-section .resume-section-content > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+section.resume-section .resume-section-content > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+section.resume-section .resume-section-content > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+section.resume-section .resume-section-content > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+section.resume-section .resume-section-content > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+section.resume-section .resume-section-content > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+section.resume-section .resume-section-content > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+section.resume-section .resume-section-content > *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+section.resume-section .resume-section-content > *:nth-child(9) {
+  animation-delay: 0.9s;
+}
+section.resume-section .resume-section-content > *:nth-child(10) {
+  animation-delay: 1s;
 }
 
 @media (min-width: 768px) {
@@ -1292,6 +1458,8 @@ section.resume-section .resume-section-content {
   color: white;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 .tech-stack .tech-pill.java {
   background: #5382a1;
@@ -1425,6 +1593,7 @@ section.resume-section .resume-section-content {
 .tech-stack .tech-pill:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
   transform: scale(1.05);
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes fadeInUp {
@@ -1442,6 +1611,15 @@ section.resume-section .resume-section-content {
   padding: 10px 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
   border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.certification-item:hover {
+  transform: translateX(10px);
+  padding-left: 10px;
+  background: linear-gradient(90deg, transparent, rgba(147, 56, 189, 0.1));
+}
+.certification-item:hover .fa-trophy {
+  animation: bounce 1s infinite;
 }
 .certification-item:hover {
   transform: translateY(-3px);
