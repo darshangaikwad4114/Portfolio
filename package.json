@@ -13,7 +13,11 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "format": "prettier --write \"src/**/*.{js,scss,html}\"",
-    "optimize:images": "imagemin src/images/* --out-dir=src/images/optimized"
+    "optimize:images": "imagemin src/images/* --out-dir=src/images/optimized",
+    "build:optimize": "npm run optimize:images && npm run optimize:css && npm run optimize:js",
+    "optimize:css": "postcss src/css/main.css --use autoprefixer cssnano --output src/css/main.min.css",
+    "optimize:js": "terser src/js/*.js --compress --mangle --output src/js/bundle.min.js",
+    "analyze": "source-map-explorer src/js/bundle.min.js"
   },
   "keywords": [
     "Portfolio",
@@ -41,7 +45,9 @@
     "postcss": "^8.4.25",
     "postcss-cli": "^10.1.0",
     "prettier": "^3.0.0",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "terser": "^5.19.2",
+    "source-map-explorer": "^2.5.3"
   },
   "browserslist": [
     ">0.2%",

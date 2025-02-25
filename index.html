@@ -26,6 +26,11 @@
     <!-- Add preload for critical resources -->
     <link rel="preload" href="./src/css/main.min.css" as="style">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.1/js/all.js" as="script">
+    <link rel="preload" href="./src/images/profile.png" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" as="style">
 </head>
 
 <body id="page-top">
@@ -208,9 +213,12 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100">
                             <div class="card-img-wrapper">
-                                <img class="card-img-top" src="./src/images/project2.png" 
+                                <img class="card-img-top" src="./src/images/project-placeholder.jpg" 
+                                     data-src="./src/images/project2.png"
                                      alt="SiriStay Resort App Screenshot" 
-                                     loading="lazy" />
+                                     loading="lazy"
+                                     width="400"
+                                     height="300" />
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center">SiriStay Resort App</h5>

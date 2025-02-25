@@ -73,4 +73,63 @@
     }).scroll();
   });
 
+  // Lazy loading implementation
+  document.addEventListener('DOMContentLoaded', function() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
+
+    // Optimize scroll performance
+    let scrollTimeout;
+    const scrollHandler = () => {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                scrollTimeout = null;
+                // Your scroll handling code
+            }, 16); // ~60fps
+        }
+    };
+
+    window.addEventListener('scroll', scrollHandler, { passive: true });
+
+    // Cache DOM elements
+    const $navbar = $('#sideNav');
+    const $sections = $('section');
+    
+    // Use RequestAnimationFrame for smooth animations
+    const animateElements = () => {
+        requestAnimationFrame(() => {
+            $sections.each(function() {
+                const rect = this.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    this.classList.add('visible');
+                }
+            });
+        });
+    };
+
+    window.addEventListener('scroll', animateElements, { passive: true });
+  });
+
+  // Performance optimization for animations
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!reducedMotion.matches) {
+    // Initialize animations
+    // ...existing animation code...
+  }
+
 })(jQuery); // End of use strict
