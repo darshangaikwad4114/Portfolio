@@ -1,7 +1,11 @@
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem; // Increased padding
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center form elements
+  gap: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -10,6 +14,8 @@
   .form-group {
     position: relative;
     margin-bottom: 2rem;
+    width: 100%; // Full width for form groups
+    text-align: left; // Keep form labels left-aligned
     
     .form-control {
       width: 100%;
@@ -146,6 +152,41 @@
   .resume-section-content {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center; // Center text content
+    
+    h2 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #9338bd, #1e90ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+      margin-bottom: 3rem; // Add more space below the heading
+      
+      .emoji {
+        display: inline-block;
+        transform: translateY(-2px); // Slight adjustment for emoji alignment
+      }
+    }
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 2rem; // Increased padding
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center form elements
+    gap: 1.5rem;
+    
+    .form-group {
+      width: 100%; // Full width for form groups
+      text-align: left; // Keep form labels left-aligned
+    }
+
+    // ...existing form styles...
   }
 }
 
