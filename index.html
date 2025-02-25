@@ -414,6 +414,54 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Contact -->
+        <section class="resume-section" id="contact">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Contact Me 📬</h2>
+                <form class="contact-form" novalidate>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="name" 
+                            placeholder="Your Name"
+                            required
+                        >
+                        <label class="form-label" for="name">Your Name</label>
+                        <div class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            placeholder="Email Address"
+                            required
+                        >
+                        <label class="form-label" for="email">Email Address</label>
+                        <div class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea 
+                            class="form-control" 
+                            id="message" 
+                            rows="5" 
+                            placeholder="Your Message"
+                            required
+                        ></textarea>
+                        <label class="form-label" for="message">Your Message</label>
+                        <div class="error-message"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </section>
     </div>
     <!-- Particle.js -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.min.js"></script>
@@ -425,6 +473,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="./src/js/script.js"></script>
     <script src="./src/js/buttons.js"></script>
+    <script src="./src/js/contact-form.js"></script>
 </body>
 
 </html>
