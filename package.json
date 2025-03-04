@@ -44,7 +44,7 @@
     "live-server": "^1.2.2",
     "postcss": "^8.5.3",
     "postcss-cli": "^10.1.0",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "sass": "^1.85.1",
     "source-map-explorer": "^2.5.3",
     "terser": "^5.39.0"
