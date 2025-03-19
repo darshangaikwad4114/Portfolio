@@ -45,7 +45,7 @@
     "postcss": "^8.5.3",
     "postcss-cli": "^10.1.0",
     "prettier": "^3.5.3",
-    "sass": "^1.85.1",
+    "sass": "^1.86.0",
     "source-map-explorer": "^2.5.3",
     "terser": "^5.39.0"
   },
