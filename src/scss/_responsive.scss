@@ -3,7 +3,7 @@ $breakpoints: (
   'sm': 576px,
   'md': 768px,
   'lg': 992px,
-  'xl': 1200px
+  'xl': 1200px,
 );
 
 @mixin respond-to($breakpoint) {
@@ -17,19 +17,27 @@ $breakpoints: (
 // Base mobile styles (< 576px)
 .resume-section {
   padding: 2rem 1rem;
-  
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  .subheading { font-size: 1.1rem; }
-  .lead { font-size: 1rem; }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .subheading {
+    font-size: 1.1rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
 }
 
 .navbar {
   padding: 0.5rem;
-  
+
   .navbar-brand {
     font-size: 1.1rem;
-    
+
     .img-profile {
       max-width: 8rem;
       max-height: 8rem;
@@ -48,14 +56,14 @@ $breakpoints: (
 
 .card {
   margin-bottom: 1.5rem;
-  
+
   .card-body {
     padding: 1rem;
   }
-  
+
   .tech-stack {
     gap: 0.3rem;
-    
+
     .tech-pill {
       padding: 0.2rem 0.5rem;
       font-size: 0.7rem;
@@ -67,19 +75,27 @@ $breakpoints: (
 @include respond-to('sm') {
   .resume-section {
     padding: 3rem 1.5rem;
-    
-    h1 { font-size: 3rem; }
-    h2 { font-size: 2.5rem; }
-    .subheading { font-size: 1.25rem; }
-    .lead { font-size: 1.1rem; }
+
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    .subheading {
+      font-size: 1.25rem;
+    }
+    .lead {
+      font-size: 1.1rem;
+    }
   }
-  
+
   .social-icons .social-icon {
     height: 3rem;
     width: 3rem;
     font-size: 1.3rem;
   }
-  
+
   .card .tech-stack {
     gap: 0.4rem;
     .tech-pill {
@@ -93,19 +109,27 @@ $breakpoints: (
 @include respond-to('md') {
   .resume-section {
     padding: 4rem 2rem;
-    
-    h1 { font-size: 3.5rem; }
-    h2 { font-size: 3rem; }
-    .subheading { font-size: 1.5rem; }
-    .lead { font-size: 1.15rem; }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    .subheading {
+      font-size: 1.5rem;
+    }
+    .lead {
+      font-size: 1.15rem;
+    }
   }
-  
+
   .social-icons .social-icon {
     height: 3.25rem;
     width: 3.25rem;
     font-size: 1.4rem;
   }
-  
+
   .projects .row {
     gap: 1.5rem;
     > div {
@@ -120,11 +144,15 @@ $breakpoints: (
   .resume-section {
     padding: 5rem 3rem;
     min-height: 100vh;
-    
-    h1 { font-size: 4rem; }
-    h2 { font-size: 3.5rem; }
+
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3.5rem;
+    }
   }
-  
+
   #sideNav {
     position: fixed;
     top: 0;
@@ -135,37 +163,37 @@ $breakpoints: (
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     .navbar-brand {
       margin: 0;
       padding: 2rem 0;
-      
+
       .img-profile {
         max-width: 10rem;
         max-height: 10rem;
         border: 0.5rem solid rgba(255, 255, 255, 0.2);
         transition: transform 0.3s ease;
-        
+
         &:hover {
           transform: scale(1.05);
         }
       }
     }
-    
+
     .navbar-collapse {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       margin: 2rem 0;
-      
+
       .navbar-nav {
         width: 100%;
         text-align: center;
-        
+
         .nav-item {
           margin: 0.75rem 0;
-          
+
           .nav-link {
             padding: 0.5rem 1rem;
             font-size: 1.1rem;
@@ -175,11 +203,11 @@ $breakpoints: (
       }
     }
   }
-  
+
   .container-fluid {
     padding-left: 17rem;
   }
-  
+
   .projects .row {
     > div {
       flex: 0 0 calc(33.333% - 2rem);
@@ -193,7 +221,7 @@ $breakpoints: (
   .resume-section {
     padding: 6rem 4rem;
   }
-  
+
   .container-fluid {
     max-width: 1400px;
     margin: 0 auto;
@@ -205,12 +233,12 @@ $breakpoints: (
   .navbar {
     display: none;
   }
-  
+
   .resume-section {
     padding: 2rem 0;
     page-break-inside: avoid;
   }
-  
+
   .container-fluid {
     padding: 0;
   }

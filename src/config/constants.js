@@ -15,8 +15,8 @@ export const COLORS = {
     600: '#6c757d',
     700: '#495057',
     800: '#343a40',
-    900: '#212529'
-  }
+    900: '#212529',
+  },
 };
 
 export const BREAKPOINTS = {
@@ -24,27 +24,27 @@ export const BREAKPOINTS = {
   sm: '576px',
   md: '768px',
   lg: '992px',
-  xl: '1200px'
+  xl: '1200px',
 };
 
 export const TRANSITIONS = {
   default: 'all 0.3s ease',
   transform: 'transform 0.3s ease',
   color: 'color 0.3s ease',
-  background: 'background-color 0.3s ease'
+  background: 'background-color 0.3s ease',
 };
 
 export const FONTS = {
   primary: '"Poppins", sans-serif',
   secondary: '"Roboto", sans-serif',
-  monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+  monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 };
 
 export const SHADOWS = {
   sm: '0 2px 4px rgba(0,0,0,0.05)',
   md: '0 4px 6px rgba(0,0,0,0.1)',
   lg: '0 10px 15px rgba(0,0,0,0.1)',
-  xl: '0 20px 25px rgba(0,0,0,0.15)'
+  xl: '0 20px 25px rgba(0,0,0,0.15)',
 };
 
 export const SKILLS_COLORS = {
@@ -61,5 +61,5 @@ export const SKILLS_COLORS = {
   mysql: '#00758f',
   firebase: '#ffca28',
   git: '#f05032',
-  github: '#181717'
+  github: '#181717',
 };

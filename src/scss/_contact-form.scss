@@ -10,13 +10,13 @@
   backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(147, 56, 189, 0.1);
-  
+
   .form-group {
     position: relative;
     margin-bottom: 2rem;
     width: 100%; // Full width for form groups
     text-align: left; // Keep form labels left-aligned
-    
+
     .form-control {
       width: 100%;
       padding: 1rem 1.5rem;
@@ -26,7 +26,7 @@
       font-size: 1rem;
       color: #343a40;
       transition: all 0.3s ease;
-      
+
       &:focus {
         outline: none;
         border-color: var(--primary);
@@ -34,7 +34,7 @@
         box-shadow: 0 0 25px rgba(147, 56, 189, 0.15);
         transform: translateY(-2px);
       }
-      
+
       &:valid:not(:placeholder-shown) ~ .form-label,
       &:focus ~ .form-label {
         transform: translateY(-140%) scale(0.85);
@@ -43,7 +43,7 @@
         color: var(--primary);
         font-weight: 600;
       }
-      
+
       &.has-error {
         border-color: #ff3366;
         animation: shake 0.5s ease-in-out;
@@ -53,12 +53,12 @@
         color: transparent;
       }
     }
-    
+
     textarea.form-control {
       min-height: 120px;
       resize: vertical;
     }
-    
+
     .form-label {
       position: absolute;
       left: 1rem;
@@ -70,7 +70,7 @@
       transition: all 0.3s ease;
       background: transparent;
     }
-    
+
     .error-message {
       position: absolute;
       bottom: -1.5rem;
@@ -81,14 +81,14 @@
       opacity: 0;
       transform: translateY(-5px);
       transition: all 0.3s ease;
-      
+
       &.show {
         opacity: 1;
         transform: translateY(0);
       }
     }
   }
-  
+
   .submit-btn {
     width: 100%;
     padding: 1rem;
@@ -101,22 +101,22 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    
+
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 20px rgba(147, 56, 189, 0.2);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
-    
+
     &:disabled {
       opacity: 0.7;
       cursor: not-allowed;
       transform: none;
     }
-    
+
     .success-animation {
       position: absolute;
       top: 50%;
@@ -124,12 +124,12 @@
       transform: translate(-50%, -50%) scale(0);
       opacity: 0;
       transition: all 0.5s ease;
-      
+
       &.show {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
       }
-      
+
       i {
         font-size: 1.5rem;
       }
@@ -138,14 +138,26 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  75% { transform: translateX(10px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 #contact {
@@ -153,7 +165,7 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center; // Center text content
-    
+
     h2 {
       font-size: 3rem;
       background: linear-gradient(to right, #9338bd, #1e90ff);
@@ -164,7 +176,7 @@
       transform: translateY(20px);
       animation: fadeInUp 0.6s ease forwards;
       margin-bottom: 3rem; // Add more space below the heading
-      
+
       .emoji {
         display: inline-block;
         transform: translateY(-2px); // Slight adjustment for emoji alignment
@@ -180,7 +192,7 @@
     flex-direction: column;
     align-items: center; // Center form elements
     gap: 1.5rem;
-    
+
     .form-group {
       width: 100%; // Full width for form groups
       text-align: left; // Keep form labels left-aligned
@@ -194,20 +206,20 @@
 @media (max-width: 768px) {
   #contact .contact-form {
     padding: 1.5rem;
-    
+
     .form-group {
       margin-bottom: 1.5rem;
-      
+
       .form-control {
         padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
       }
-      
+
       .form-label {
         font-size: 0.95rem;
       }
     }
-    
+
     .submit-btn {
       padding: 0.8rem;
       font-size: 1rem;
