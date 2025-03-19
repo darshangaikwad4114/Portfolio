@@ -8,13 +8,14 @@
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   // Gradient border button
   &-gradient {
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
     border: 2px solid transparent;
-    
+
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
@@ -22,14 +23,14 @@
       color: white;
     }
   }
-  
+
   // 3D Transform button
   &-3d {
     background: var(--primary);
     color: white;
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -42,21 +43,21 @@
       border-radius: 8px;
       transition: transform 0.3s;
     }
-    
+
     &:hover {
       transform: perspective(1000px) translateZ(10px);
     }
-    
+
     &:active {
       transform: perspective(1000px) translateZ(2px);
     }
   }
-  
+
   // Ripple effect button
   &-ripple {
     background: var(--secondary);
     color: white;
-    
+
     .ripple {
       position: absolute;
       border-radius: 50%;
@@ -65,13 +66,13 @@
       animation: ripple 0.6s linear;
     }
   }
-  
+
   // Glowing border button
   &-glow {
     background: transparent;
     color: var(--primary);
     border: 2px solid var(--primary);
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -82,23 +83,27 @@
       border-radius: 8px;
       padding: 2px;
       background: linear-gradient(45deg, var(--primary), var(--secondary));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
     }
-    
+
     &:hover {
       box-shadow: 0 0 15px var(--primary);
       color: white;
       background: var(--primary);
     }
   }
-  
+
   // Magnetic button
   &-magnetic {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     &:hover {
       transform: translate(var(--mx, 0), var(--my, 0));
     }
@@ -119,13 +124,13 @@
     position: relative;
     overflow: hidden;
     padding: 0;
-    
+
     i {
       width: 1.6em;
       margin: 0 0.8em;
       transition: all 0.6s ease;
     }
-    
+
     span {
       margin: 0 1.5em;
     }
@@ -133,20 +138,20 @@
     &:hover {
       background-color: transparent;
       color: #3654ff;
-      
+
       i {
         transform: translateX(5px);
       }
     }
-    
+
     // Demo button variant
     &.btn-secondary {
-      background-color: #FF3366;
-      border-color: #FF3366;
-      
+      background-color: #ff3366;
+      border-color: #ff3366;
+
       &:hover {
         background-color: transparent;
-        color: #FF3366;
+        color: #ff3366;
       }
     }
   }
@@ -165,18 +170,22 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, 
-        rgba(255,255,255,0.8) 0%,
-        rgba(255,255,255,0) 70%);
+      background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
       opacity: 0;
-      transition: opacity 0.3s, transform 0.5s;
+      transition:
+        opacity 0.3s,
+        transform 0.5s;
       z-index: -1;
     }
 
     &:nth-child(1) {
-      background: #0077B5;
+      background: #0077b5;
       &:hover {
-        background: #0077B5;
+        background: #0077b5;
         filter: brightness(1.2);
         transform: perspective(500px) rotateY(15deg);
       }
@@ -192,18 +201,18 @@
     }
 
     &:nth-child(3) {
-      background: #E4405F;
+      background: #e4405f;
       &:hover {
-        background: #E4405F;
+        background: #e4405f;
         filter: brightness(1.2);
         transform: perspective(500px) rotateY(15deg);
       }
     }
 
     &:nth-child(4) {
-      background: #FF3366;
+      background: #ff3366;
       &:hover {
-        background: #FF3366;
+        background: #ff3366;
         filter: brightness(1.2);
         transform: perspective(500px) rotateY(-15deg);
       }
@@ -216,7 +225,7 @@
     }
 
     &:hover {
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
       &::before {
         opacity: 1;
@@ -230,7 +239,7 @@
 
       i {
         animation: float 1s ease infinite alternate;
-        filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
       }
     }
   }
@@ -245,7 +254,8 @@
 }
 
 @keyframes iconFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -266,13 +276,21 @@
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes bounce {
-  from { transform: translateY(-3px); }
-  to { transform: translateY(3px); }
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(3px);
+  }
 }
 
 @keyframes wave {
